@@ -1,0 +1,13 @@
+def evaluate_stress(x_list,y_list):
+	h=0.00001
+	sig_xz=eval_grad(evaluate_phi,x_list,y_list)[1]
+	sig_yz=-eval_grad(evaluate_phi,x_list,y_list)[0]
+	return np.sqrt(sig_xz**2+sig_yz**2)
+
+
+sig=evaluate_stress(x_list,y_list)
+
+
+
+
+              
